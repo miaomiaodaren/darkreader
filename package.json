@@ -1,6 +1,6 @@
 {
   "name": "@umijs/ssr-darkreader",
-  "version": "4.9.43",
+  "version": "4.9.44",
   "description": "Dark mode for every website",
   "scripts": {
     "api": "node tasks/build.js --api",
@@ -71,8 +71,8 @@
     "@types/jasmine": "3.10.1",
     "@types/jest": "27.0.2",
     "@types/karma": "6.3.1",
-    "@types/offscreencanvas": "2019.6.4",
     "@types/node": "16.11.6",
+    "@types/offscreencanvas": "2019.6.4",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "chokidar": "3.5.2",
