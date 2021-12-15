@@ -52,8 +52,8 @@ export function createNodeAsap({
             document.removeEventListener('readystatechange', ready);
             observer.disconnect();
         };
-
-        if (document.readyState === 'complete') {
+        if (typeof window === 'undefined') return;
+        if ( document.readyState === 'complete') {
             ready();
         } else {
             document.addEventListener('readystatechange', ready);
@@ -189,6 +189,7 @@ export function iterateShadowHosts(root: Node, iterator: (host: Element) => void
 }
 
 export function isDOMReady() {
+    if (typeof document === 'undefined') return false;
     return document.readyState === 'complete' || document.readyState === 'interactive';
 }
 
@@ -230,8 +231,10 @@ if (!isDOMReady()) {
             }
         }
     };
+    if (typeof document !== 'undefined') {
+        document.addEventListener('readystatechange', onReadyStateChange);
+    }
 
-    document.addEventListener('readystatechange', onReadyStateChange);
 }
 
 const HUGE_MUTATIONS_COUNT = 1000;
