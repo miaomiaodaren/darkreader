@@ -160,6 +160,5 @@ declare namespace DarkReader {
     }
 }
 
-declare module 'darkreader' {
-    export = DarkReader;
-}
+export = DarkReader;
+export as namespace DarkReader;
