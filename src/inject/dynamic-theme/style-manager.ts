@@ -42,7 +42,6 @@ export function shouldManageStyle(element: Node) {
       (element instanceof HTMLLinkElement &&
         element.rel &&
         element.rel.toLowerCase().includes('stylesheet') &&
-        !element.disabled &&
         (isFirefox ? !element.href.startsWith('moz-extension://') : true))) &&
     !element.classList.contains('darkreader') &&
     element.media.toLowerCase() !== 'print' &&
